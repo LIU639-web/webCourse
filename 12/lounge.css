@@ -1,10 +1,25 @@
-p{
-  color:maroon;
+p {
+  /* font-family: 'Segoe Script'; */
+  color:rgb(238, 104, 167);
+  font-size: 2vw;
 }
-  h1,h2{
-  font-family: Arial;
-  color: rgb(236, 111, 199);
+
+h1, h2 {
+  font-family: "Cascadia Mono";
+  color:rgb(235, 92, 135);
+  border-bottom: 1px solid black;
+  font-size: 1.4rem;
 }
-  h1{
-  border-bottom: 1px solid rgb(230, 60, 111);
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+}
+
+body {
+  font-family: 'Segoe Script';
+}
+
+html {
+  font-size: 20px;
 }
