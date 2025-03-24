@@ -1,23 +1,23 @@
 p {
   /* font-family: 'Segoe Script'; */
-  color:rgb(238, 104, 167);
+  color:rgb#51c4d3
   font-size: 2vw;
 }
 
 h1, h2 {
   font-family: "Cascadia Mono";
-  color:rgb(235, 92, 135);
-  border-bottom: 1px solid black;
+  color:rgb#c6dfc8;
+  border-bottom: 1px solid ;color:#51c4d3;
   font-size: 1.4rem;
 }
 
 h1 {
   font-size: 2rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ;color:#51c4d3;
 }
 
 body {
-  font-family: 'Segoe Script';
+  font-family: 'Segoe Script';color:#83cbac;
 }
 
 html {
