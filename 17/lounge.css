@@ -32,4 +32,12 @@ h1,body,p {
   font-style: italic;
   color: #444444;
   font-family: Georgia,"Times New Roman";
+  background-image: url(images/background.gif);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 250px;
+  border-top-right-radius:2em;
+  border-bottom-left-radius:2em;
 }
