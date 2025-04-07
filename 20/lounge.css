@@ -1,0 +1,114 @@
+body {
+	font-size: small;
+	font-family: Verdana, Helvetica, Arial;
+  line-height: 1.6em;
+}
+
+h1, h2 {
+	color: #007e7e;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h1,body,p {
+  margin: 0;
+  padding: 0;
+}
+.guarantee {
+  border-color: white;
+	border-width: 1px;
+	border-style: dashed;
+  background-color:#a7cece;
+  padding: 25px;
+  margin: 30px;
+  line-height: 1.9em;
+  font-style: italic;
+  color: #444444;
+  font-family: Georgia,"Times New Roman";
+  background-image: url(images/background.gif);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 250px;
+  border-top-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.elixirs {
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+  width: 200px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-left: 20px;
+  background-image: url(images/cocktail.gif);
+  background-repeat: repeat-x;
+  text-align: center;
+  line-height: 1;
+}
+
+.elixirs h2 {
+  color: black;
+}
+
+.elixirs h3 {
+  color: #d12c47;
+}
+
+.cd {
+	display: inline-block;
+	font-style: italic;
+	width: 500px;
+}
+
+.artist {
+  font-weight: bold;
+}
+
+a.link {
+  color: rgb(6, 95, 179);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(19, 89, 240);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7ae0e0;
+  text-decoration: none;
+}
+
+.text {
+  color: blue;
+}
+
+h1,h2 {
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+.green-font {
+  color: green;
+}
+
+.red-font {
+  color: red;
+}
+
+.blue-font {
+  color: blue;
+}
