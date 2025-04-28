@@ -1,0 +1,24 @@
+head {
+  background-image: url(./pic/背景图.jpg);
+}
+
+h1 {
+  /* color: white; */
+  position: relative;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 3;
+}
+
+a {
+  color: white;
+  background-color: #e30045;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+a:link {
+  text-decoration: none;
+}
