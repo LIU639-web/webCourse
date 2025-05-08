@@ -1,22 +1,31 @@
-head {
-  background-image: url(./pic/背景图.jpg);
-}
-
-h1 {
-  /* color: white; */
+head{
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))
+              url(./pic/背景图.jpg);
   position: relative;
-  top: 45%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  z-index: 3;
+  line-height: 1.6;
 }
 
-a {
+h1{
+  position: absolute;
+  left: 50%;
+  top: 50%;
   color: white;
-  background-color: #e30045;
-  letter-spacing: 1px;
-  line-height: 1;
+  font-family: 'Arial', sans-serif;
+  transform: translate(-50%, -50%);
+}
+
+p{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  transform: translate(-50%,-50%);
 }
 
 a:link {
