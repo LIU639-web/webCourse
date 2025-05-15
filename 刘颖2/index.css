@@ -51,6 +51,7 @@ body {
   display: block;
   text-align: center;
   margin: 0 auto;
+  letter-spacing: 1px;
 }
 
 svg {
@@ -69,14 +70,51 @@ svg {
   display: inline-block;
   position: absolute;
   bottom: 325px;
-  left: 48%;
-  transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%) skewX(-15deg) rotate(-5deg);
   color: #fff;
   text-decoration: none;
   font-family: 'FF Sanuk OT', sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
   z-index: 20;
-  transform: skewX(-5deg);
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+  background-color: #e30045;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.mehr > a:hover {
+  background-color: #d40040;
+  color: #fff;
+  text-decoration: none;
+}
+
+.jiao > a {
+  display: inline-block;
+  position: absolute;
+  text-decoration: none;
+  font-family: 'FF Sanuk OT', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  padding: 10px 10px;
+  border: 2px solid #ffffff;
+  width: 10px;
+  height: 5px;
+  border-radius: 4px;
+  z-index: 4;
+  cursor: pointer;
+  outline: 0;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.jiao > a:hover {
+  background-color: #e30045;
+  color: #fff;
+  text-decoration: none;
 }
