@@ -1,0 +1,67 @@
+// sometimes, the gtm can be faster than the whole content-load, so check for both events!
+const WaitForDom = new Promise((resolve) => {
+    window.addEventListener("DOMContentLoaded", () => {
+        
+        resolve();
+    });
+});
+const WaitForGtm = new Promise((resolve) => {
+    // dispatch the event for the document OR configure it bubbling
+    document.addEventListener('gtmIsLoaded', (e) => {
+
+        resolve(e);
+    });
+});
+
+Promise
+    .all([WaitForDom, WaitForGtm])
+    .then(([_, evt]) => {
+        const cookieMarkerContent = evt.detail
+
+        const cookieBannerMarkup = `<div id="cookie-consent" class="cookie-banner">
+      <div class="cookie-banner__container">
+          <div class="cookie-banner__text">
+              <p class="cookie-banner__title">${cookieMarkerContent.title}</p>
+              <p class="cookie-banner__desc">${cookieMarkerContent.description}</p>
+          </div>
+          <div class="cookie-banner__cta">
+            <a 
+                href="${cookieMarkerContent.privacyUrl}"
+                class="cookie-banner__settings"
+            >
+                ${cookieMarkerContent.settings}
+            </a>
+            <button id="btn-accept-all" class="cookie-banner__button">
+              ${cookieMarkerContent.confirm}
+            </button>
+          </div>
+        </div>
+    </div>`;
+
+        if (!localStorage.getItem("consentMode")) {
+            if (!document.querySelector('.cookie-choices__container')) {
+                if (!document.querySelector('.cookie-banner__button')) {
+                    document.body.insertAdjacentHTML("afterbegin", cookieBannerMarkup);
+                }
+            }
+
+            document.querySelector('.cookie-banner__button').focus()
+
+            try {
+                window.dataLayer.push({
+                    event: "cookieBarIsDisplaying",
+                });
+            } catch (e) {
+                console.error('No datalayer')
+            }
+
+        } else {
+            try {
+                window.dataLayer.push({
+                    event: "consentAlreadyGiven",
+                });
+            } catch (e) {
+                console.error('No datalayer')
+            }
+        }
+    })
